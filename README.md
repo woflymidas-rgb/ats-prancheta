@@ -10,8 +10,7 @@ Project code: MIT. Dependencies and media retain their own terms.
 
 ### Status and installation
 
-Source code is available here. The installer has compiled successfully but still needs
-installation validation before a public release. No installer release is published yet.
+Download the installer or portable ZIP from [Releases](https://github.com/woflymidas-rgb/ats-prancheta/releases/latest).
 This is a native telemetry DLL and an external Windows overlay, not a .scs Workshop mod.
 No Python, application account or network connection is needed while playing.
 
@@ -38,7 +37,7 @@ Data stays in `%LOCALAPPDATA%/ATSPrancheta/prototype-single-profile`.
 Open source enables inspection; it is not a digital signature or a security certification.
 
 MIT covers our code, not SCS game resources or third-party media. See CREDITOS.txt and licenses/.
-Audio files are excluded from this source upload while redistribution conditions are reviewed.
+Audio files are supplied in the release packages; see CREDITOS.txt for their sources.
 Missing audio does not prevent displaying documents; playback fails silently.
 Real-company logos from the third-party mod used during development are not redistributed.
 [Truck Manager notes](docs/MOD-MANAGERS.md): integration is not confirmed; both default to F8.
@@ -54,7 +53,7 @@ Código do projeto sob MIT; dependências e recursos possuem condições própri
 Use uma versão publicada em Releases. Esta aplicação é uma DLL de telemetria e um
 visor Windows externo; não é um arquivo .scs e não se instala por inscrição no Workshop.
 Não há exigência de Python para jogar, conexão de rede ou conta neste aplicativo.
-O instalador foi compilado, mas ainda aguarda validação de instalação. Não há release pública neste momento.
+O instalador e o ZIP estão disponíveis em [Releases](https://github.com/woflymidas-rgb/ats-prancheta/releases/latest).
 
 F8 abre/fecha por padrão; Ctrl+F8 configura a tecla, inclusive teclas usadas pelo jogo.
 Novo documento abre automaticamente. Registros são fixos e separados por perfil.
@@ -86,10 +85,9 @@ Não desative antivírus para instalar. Reporte falsos positivos com versão/has
 MIT aplica-se ao código próprio. SDK, SII-Decrypt-cpp e nlohmann/json mantêm suas
 licenças em licenses e nas respectivas pastas. Traduções/nomes/logos oficiais extraídos
 do ATS não são relicenciados por este LICENSE. A arte da prancheta foi gerada para
-este projeto; áudios e suas fontes constam em CREDITOS.txt. A permissão de redistribuição
-do Page-flip ainda deve ser esclarecida antes da release pública.
+este projeto; áudios e suas fontes constam em CREDITOS.txt. Fontes dos áudios registradas em CREDITOS.txt.
 Logos do mod de empresas reais usado nos testes não estão incluídos.
-Os MP3s ficam fora deste envio de código enquanto as condições de redistribuição são conferidas; a ficha funciona sem áudio.
+Os MP3s são fornecidos nos pacotes da release; as fontes constam em CREDITOS.txt.
 
 ## Gerenciadores
 
