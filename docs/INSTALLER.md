@@ -12,4 +12,4 @@ or deleted. An uninstaller and Start-menu shortcuts are provided. Other plugins 
 not replaced. User must close ATS and visor first; no process is terminated by setup.
 The visor still needs to be running before playing; no autostart service/task is added.
 
-Status: installer compiled successfully with Inno Setup 7.1.1. Interactive installation validation remains pending. Do not publish the installer before validation.
+Status: compiled successfully with Inno Setup 7.1.1. Interactive installation validation remains pending. No installer release has been published.
