@@ -12,7 +12,7 @@ PrivilegesRequired=admin
 ArchitecturesAllowed=x64compatible
 ArchitecturesInstallIn64BitMode=x64compatible
 OutputDir=..\dist
-OutputBaseFilename=ATS-Prancheta-1.0.0-Setup-r2
+OutputBaseFilename=ATS-Prancheta-1.0.0-Setup-r3
 Compression=lzma2
 SolidCompression=yes
 WizardStyle=modern
@@ -64,7 +64,15 @@ procedure InitializeWizard;
 var Steam, Candidate, Line, Value: String; Lines: TArrayOfString; I, P: Integer;
 begin
   WizardForm.SelectDirLabel.Caption := CustomMessage('AppDirectoryHelp');
+  WizardForm.SelectDirLabel.AutoSize := False;
+  WizardForm.SelectDirLabel.WordWrap := True;
   WizardForm.SelectDirLabel.Height := ScaleY(44);
+  WizardForm.SelectDirBrowseLabel.Top := WizardForm.SelectDirLabel.Top + WizardForm.SelectDirLabel.Height + ScaleY(10);
+  WizardForm.SelectDirBrowseLabel.AutoSize := False;
+  WizardForm.SelectDirBrowseLabel.WordWrap := True;
+  WizardForm.SelectDirBrowseLabel.Height := ScaleY(32);
+  WizardForm.DirEdit.Top := WizardForm.SelectDirBrowseLabel.Top + WizardForm.SelectDirBrowseLabel.Height + ScaleY(8);
+  WizardForm.DirBrowseButton.Top := WizardForm.DirEdit.Top - ScaleY(1);
   GamePage := CreateInputDirPage(wpSelectDir, CustomMessage('GameDirectoryTitle'),
     CustomMessage('GameDirectorySubtitle'), CustomMessage('GameDirectoryHelp'), False, '');
   GamePage.Add(CustomMessage('GameDirectoryLabel'));
