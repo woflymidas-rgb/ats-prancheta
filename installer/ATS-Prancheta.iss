@@ -8,11 +8,12 @@ AppPublisherURL=https://steamcommunity.com/id/clicktaberna/
 AppSupportURL=https://github.com/woflymidas-rgb/ats-prancheta/issues
 DefaultDirName={autopf}\ATS Prancheta
 DefaultGroupName=ATS Prancheta
+DisableProgramGroupPage=yes
 PrivilegesRequired=admin
 ArchitecturesAllowed=x64compatible
 ArchitecturesInstallIn64BitMode=x64compatible
 OutputDir=..\dist
-OutputBaseFilename=ATS-Prancheta-1.0.0-Setup-r4
+OutputBaseFilename=ATS-Prancheta-1.0.0-Setup-r5
 Compression=lzma2
 SolidCompression=yes
 WizardStyle=modern
@@ -40,6 +41,15 @@ brazilianportuguese.BackupError=Não foi possível preservar o backup da DLL. A 
 english.BackupError=The DLL could not be backed up. Installation was stopped.
 brazilianportuguese.StartClipboard=Iniciar a prancheta
 english.StartClipboard=Start the clipboard
+brazilianportuguese.ShortcutsGroup=Atalhos opcionais:
+english.ShortcutsGroup=Optional shortcuts:
+brazilianportuguese.StartMenuShortcut=Criar atalhos no Menu Iniciar
+english.StartMenuShortcut=Create Start menu shortcuts
+brazilianportuguese.DesktopShortcut=Criar atalho na Área de Trabalho
+english.DesktopShortcut=Create a desktop shortcut
+[Tasks]
+Name: "startmenu"; Description: "{cm:StartMenuShortcut}"; GroupDescription: "{cm:ShortcutsGroup}"; Flags: unchecked
+Name: "desktop"; Description: "{cm:DesktopShortcut}"; GroupDescription: "{cm:ShortcutsGroup}"; Flags: unchecked
 [Files]
 Source: "..\build\ATSPrancheta.exe"; DestDir: "{app}"; Flags: ignoreversion
 Source: "..\build\ATSPrancheta.dll"; DestDir: "{code:GetPluginDir}"; Flags: ignoreversion
@@ -50,8 +60,9 @@ Source: "..\licenses\*"; DestDir: "{app}\licenses"; Flags: ignoreversion recurse
 Source: "..\CREDITOS.txt"; DestDir: "{app}"; Flags: ignoreversion
 Source: "..\README.md"; DestDir: "{app}"; Flags: ignoreversion
 [Icons]
-Name: "{group}\ATS Prancheta"; Filename: "{app}\ATSPrancheta.exe"; WorkingDir: "{app}"
-Name: "{group}\Desinstalar ATS Prancheta"; Filename: "{uninstallexe}"
+Name: "{group}\ATS Prancheta"; Filename: "{app}\ATSPrancheta.exe"; WorkingDir: "{app}"; Tasks: startmenu
+Name: "{group}\Desinstalar ATS Prancheta"; Filename: "{uninstallexe}"; Tasks: startmenu
+Name: "{autodesktop}\ATS Prancheta"; Filename: "{app}\ATSPrancheta.exe"; WorkingDir: "{app}"; Tasks: desktop
 [INI]
 Filename: "{code:GetPluginDir}\ATSPrancheta-launch.ini"; Section: "Companion"; Key: "Executable"; String: "{app}\ATSPrancheta.exe"; Flags: uninsdeleteentry uninsdeletesectionifempty
 [Code]

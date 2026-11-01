@@ -20,3 +20,5 @@ Close ATS and the old overlay before upgrading. Setup does not terminate either 
 The post-install "start overlay" checkbox was removed: the next ATS launch starts it.
 
 Status: setup compiles; game opening/closing lifecycle requires manual confirmation.
+
+Setup r5: Start menu and desktop shortcuts are independent optional tasks, unchecked on a fresh install. The program-group selection page is hidden. Automatic launch with ATS does not depend on either shortcut. Uninstall remains available in Windows installed apps without shortcuts.
