@@ -15,6 +15,8 @@ installation validation before a public release. No installer release is publish
 This is a native telemetry DLL and an external Windows overlay, not a .scs Workshop mod.
 No Python, application account or network connection is needed while playing.
 
+The ATS plugin automatically starts the overlay and the overlay exits when that game process ends, including crashes. No Windows startup service or scheduled task is installed. A manual shortcut remains available for troubleshooting.
+
 F8 toggles the clipboard; Ctrl+F8 changes the shortcut. Existing game bindings are allowed.
 New documents open automatically. Data stays fixed during the trip and is stored per profile.
 Windows x64 / ATS 1.61.3.18 tested. VR, other platforms and World of Trucks not validated.

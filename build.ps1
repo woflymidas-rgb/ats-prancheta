@@ -28,9 +28,13 @@ try {
     if($LASTEXITCODE){throw 'Plugin build failed'}
     & $compiler @common /Fobuild\viewer.obj viewer.cpp /link /SUBSYSTEM:WINDOWS /OUT:build\ATSPrancheta.exe
     if($LASTEXITCODE){throw 'Viewer build failed'}
-    if($RunTests){foreach($name in @('document-check','plugin-check','settings-check','localization-check','audio-check')) {
+    if($RunTests){foreach($name in @('document-check','plugin-check','settings-check','localization-check','audio-check','companion-check')) {
         & $compiler @common /UNDEBUG "/Fobuild\$name.obj" "$name.cpp" /link build\reader-core.lib "/OUT:build\$name.exe"
         if($LASTEXITCODE){throw "Test build failed: $name"}
+        if($name -eq 'companion-check'){
+            New-Item -ItemType Directory build\lifecycle-fixture -Force | Out-Null
+            Copy-Item build\companion-check.exe build\lifecycle-fixture\amtrucks.exe -Force
+        }
         & ".\build\$name.exe"
         if($LASTEXITCODE){throw "Test failed: $name"}
     }}

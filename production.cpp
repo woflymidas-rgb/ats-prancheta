@@ -4,6 +4,7 @@
 #include "profile.h"
 #include "branding.h"
 #include "clipboard-audio.h"
+#include "companion.h"
 #include <future>
 #include "scssdk_telemetry.h"
 #include "amtrucks/scssdk_ats.h"
@@ -199,6 +200,7 @@ SCSAPI_RESULT scs_telemetry_init(scs_u32_t version, const scs_telemetry_init_par
         if (p->register_for_event(kind, on_event, nullptr) != SCS_RESULT_ok) return SCS_RESULT_generic_error;
     if (p->register_for_channel("game.time", SCS_U32_NIL, SCS_VALUE_TYPE_u32, SCS_TELEMETRY_CHANNEL_FLAG_no_value, clock_callback, nullptr) != SCS_RESULT_ok) return SCS_RESULT_generic_error;
     if (p->register_for_channel("trailer.connected", SCS_U32_NIL, SCS_VALUE_TYPE_bool, SCS_TELEMETRY_CHANNEL_FLAG_no_value, connection_callback, nullptr) != SCS_RESULT_ok) return SCS_RESULT_generic_error;
+    try {if(!companion::launch(asset_root.parent_path())) log("[ATSPrancheta] Visor automatico indisponivel; verifique a instalacao.");}catch(...) {log("[ATSPrancheta] Falha ao iniciar visor; documentos preservados.");}
     log("[ATSPrancheta] Prototipo 0.7 iniciado. Documento estruturado e marca congelada; folha vazia preservada.");
     return SCS_RESULT_ok;
 }

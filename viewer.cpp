@@ -3,6 +3,7 @@
 #include "document-renderer.h"
 #include "hotkey-panel.h"
 #include "clipboard-audio.h"
+#include "companion.h"
 
 #include <algorithm>
 #pragma comment(lib, "user32.lib")
@@ -79,7 +80,9 @@ static void open_clipboard(HWND window) {
 static LRESULT CALLBACK procedure(HWND window, UINT message, WPARAM w, LPARAM l) {
     switch (message) {
 
+    case companion::attach_message: return companion::attach(static_cast<DWORD>(w),static_cast<unsigned long long>(l))?1:0;
     case WM_TIMER: {
+        if(companion::finished()){if(hotkey_ui::panel) DestroyWindow(hotkey_ui::panel);DestroyWindow(window);return 0;}
         const bool focused=preview || game_focused(window);
 
         const auto audio_now=GetTickCount64();
@@ -141,7 +144,7 @@ static LRESULT CALLBACK procedure(HWND window, UINT message, WPARAM w, LPARAM l)
         DeleteDC(memory); ReleaseDC(nullptr,screen); EndPaint(window,&ps); return 0;
     }
     case WM_ERASEBKGND: return 1;
-    case WM_DESTROY: clipboard_audio::stop();KillTimer(window, 1); PostQuitMessage(0); return 0;
+    case WM_DESTROY: companion::close();clipboard_audio::stop();KillTimer(window, 1); PostQuitMessage(0); return 0;
     }
     return DefWindowProcW(window, message, w, l);
 }
@@ -154,6 +157,10 @@ int WINAPI wWinMain(HINSTANCE instance, HINSTANCE, PWSTR args, int) {
     const bool render_only = render_settings || (args && wcsstr(args, L"--render-preview"));
     HANDLE singleton = CreateMutexW(nullptr, TRUE, render_only ? L"Local\\ATSPranchetaRender" : L"Local\\ATSPranchetaViewerPrototype");
     if (!singleton || GetLastError() == ERROR_ALREADY_EXISTS) { if (singleton) CloseHandle(singleton); return 0; }
+    if(!render_only && args) {
+        const auto pid=wcsstr(args,L"--game-pid=");const auto born=wcsstr(args,L"--game-born=");
+        if(pid && born && !companion::attach(static_cast<DWORD>(wcstoul(pid+11,nullptr,10)),_wcstoui64(born+12,nullptr,10))) {CloseHandle(singleton);return 1;}
+    }
     SetProcessDPIAware();
     try { root = render_only ? std::filesystem::current_path() : data_root(); } catch (...) { MessageBoxW(nullptr, i18n::wtr("open_error").c_str(), L"ATS Clipboard", MB_OK); CloseHandle(singleton); return 1; }
     wchar_t module[32768]; GetModuleFileNameW(nullptr,module,32768); visual_assets=std::filesystem::path(module).parent_path()/L"assets";

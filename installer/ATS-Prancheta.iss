@@ -12,7 +12,7 @@ PrivilegesRequired=admin
 ArchitecturesAllowed=x64compatible
 ArchitecturesInstallIn64BitMode=x64compatible
 OutputDir=..\dist
-OutputBaseFilename=ATS-Prancheta-1.0.0-Setup-r3
+OutputBaseFilename=ATS-Prancheta-1.0.0-Setup-r4
 Compression=lzma2
 SolidCompression=yes
 WizardStyle=modern
@@ -52,8 +52,8 @@ Source: "..\README.md"; DestDir: "{app}"; Flags: ignoreversion
 [Icons]
 Name: "{group}\ATS Prancheta"; Filename: "{app}\ATSPrancheta.exe"; WorkingDir: "{app}"
 Name: "{group}\Desinstalar ATS Prancheta"; Filename: "{uninstallexe}"
-[Run]
-Filename: "{app}\ATSPrancheta.exe"; Description: "{cm:StartClipboard}"; Flags: nowait postinstall skipifsilent runasoriginaluser
+[INI]
+Filename: "{code:GetPluginDir}\ATSPrancheta-launch.ini"; Section: "Companion"; Key: "Executable"; String: "{app}\ATSPrancheta.exe"; Flags: uninsdeleteentry uninsdeletesectionifempty
 [Code]
 var GamePage: TInputDirWizardPage;
 function GetPluginDir(Param: String): String;
