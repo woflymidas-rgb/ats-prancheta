@@ -12,7 +12,7 @@ PrivilegesRequired=admin
 ArchitecturesAllowed=x64compatible
 ArchitecturesInstallIn64BitMode=x64compatible
 OutputDir=..\dist
-OutputBaseFilename=ATS-Prancheta-1.0.0-Setup
+OutputBaseFilename=ATS-Prancheta-1.0.0-Setup-r2
 Compression=lzma2
 SolidCompression=yes
 WizardStyle=modern
@@ -23,6 +23,23 @@ LicenseFile=..\LICENSE
 [Languages]
 Name: "brazilianportuguese"; MessagesFile: "compiler:Languages\BrazilianPortuguese.isl"
 Name: "english"; MessagesFile: "compiler:Default.isl"
+[CustomMessages]
+brazilianportuguese.AppDirectoryHelp=Esta pasta guarda o aplicativo da prancheta. Pode escolher qualquer pasta; ela não precisa ficar dentro da pasta do jogo.
+english.AppDirectoryHelp=This folder stores the clipboard application. Choose any folder; it does not need to be inside the game folder.
+brazilianportuguese.GameDirectoryTitle=Local do executável do ATS
+english.GameDirectoryTitle=ATS executable location
+brazilianportuguese.GameDirectorySubtitle=Selecione a pasta que contém amtrucks.exe
+english.GameDirectorySubtitle=Select the folder containing amtrucks.exe
+brazilianportuguese.GameDirectoryHelp=Feche o ATS e a prancheta antes de instalar. Selecione a pasta do executável do jogo, geralmente: ...\American Truck Simulator\bin\win_x64
+english.GameDirectoryHelp=Close ATS and the clipboard before installing. Select the game executable folder, usually: ...\American Truck Simulator\bin\win_x64
+brazilianportuguese.GameDirectoryLabel=Pasta que contém amtrucks.exe:
+english.GameDirectoryLabel=Folder containing amtrucks.exe:
+brazilianportuguese.InvalidGameDirectory=Não encontramos amtrucks.exe nesta pasta. Selecione a pasta ...\American Truck Simulator\bin\win_x64.
+english.InvalidGameDirectory=amtrucks.exe was not found in this folder. Select ...\American Truck Simulator\bin\win_x64.
+brazilianportuguese.BackupError=Não foi possível preservar o backup da DLL. A instalação foi interrompida.
+english.BackupError=The DLL could not be backed up. Installation was stopped.
+brazilianportuguese.StartClipboard=Iniciar a prancheta
+english.StartClipboard=Start the clipboard
 [Files]
 Source: "..\build\ATSPrancheta.exe"; DestDir: "{app}"; Flags: ignoreversion
 Source: "..\build\ATSPrancheta.dll"; DestDir: "{code:GetPluginDir}"; Flags: ignoreversion
@@ -36,22 +53,23 @@ Source: "..\README.md"; DestDir: "{app}"; Flags: ignoreversion
 Name: "{group}\ATS Prancheta"; Filename: "{app}\ATSPrancheta.exe"; WorkingDir: "{app}"
 Name: "{group}\Desinstalar ATS Prancheta"; Filename: "{uninstallexe}"
 [Run]
-Filename: "{app}\ATSPrancheta.exe"; Description: "Iniciar prancheta / Start clipboard"; Flags: nowait postinstall skipifsilent runasoriginaluser
+Filename: "{app}\ATSPrancheta.exe"; Description: "{cm:StartClipboard}"; Flags: nowait postinstall skipifsilent runasoriginaluser
 [Code]
 var GamePage: TInputDirWizardPage;
 function GetPluginDir(Param: String): String;
-begin Result := AddBackslash(GamePage.Values[0]) + 'bin\win_x64\plugins'; end;
+begin Result := AddBackslash(GamePage.Values[0]) + 'plugins'; end;
 function GameValid(Path: String): Boolean;
-begin Result := FileExists(AddBackslash(Path) + 'bin\win_x64\amtrucks.exe'); end;
+begin Result := FileExists(AddBackslash(Path) + 'amtrucks.exe'); end;
 procedure InitializeWizard;
 var Steam, Candidate, Line, Value: String; Lines: TArrayOfString; I, P: Integer;
 begin
-  GamePage := CreateInputDirPage(wpSelectDir, 'American Truck Simulator',
-    'Selecione a pasta do ATS / Select the ATS directory',
-    'Feche o ATS e o visor antes de instalar. Selecione a pasta que contem bin. / Close ATS and the overlay before installing. Select the folder containing bin.', False, '');
-  GamePage.Add('Pasta do jogo / Game directory:');
+  WizardForm.SelectDirLabel.Caption := CustomMessage('AppDirectoryHelp');
+  WizardForm.SelectDirLabel.Height := ScaleY(44);
+  GamePage := CreateInputDirPage(wpSelectDir, CustomMessage('GameDirectoryTitle'),
+    CustomMessage('GameDirectorySubtitle'), CustomMessage('GameDirectoryHelp'), False, '');
+  GamePage.Add(CustomMessage('GameDirectoryLabel'));
   if RegQueryStringValue(HKCU, 'Software\Valve\Steam', 'SteamPath', Steam) then begin
-    Candidate := AddBackslash(Steam) + 'steamapps\common\American Truck Simulator';
+    Candidate := AddBackslash(Steam) + 'steamapps\common\American Truck Simulator\bin\win_x64';
     if GameValid(Candidate) then GamePage.Values[0] := Candidate;
     if LoadStringsFromFile(AddBackslash(Steam) + 'steamapps\libraryfolders.vdf', Lines) then
       for I := 0 to GetArrayLength(Lines)-1 do begin
@@ -62,7 +80,7 @@ begin
             Delete(Value,1,1); P := Pos('"',Value);
             if P>0 then begin
               Value := Copy(Value,1,P-1); StringChangeEx(Value,'\\','\',True);
-              Candidate := AddBackslash(Value) + 'steamapps\common\American Truck Simulator';
+              Candidate := AddBackslash(Value) + 'steamapps\common\American Truck Simulator\bin\win_x64';
               if GameValid(Candidate) then GamePage.Values[0] := Candidate;
             end;
           end;
@@ -74,17 +92,17 @@ function NextButtonClick(CurPageID: Integer): Boolean;
 begin
   Result := True;
   if (CurPageID=GamePage.ID) and not GameValid(GamePage.Values[0]) then begin
-    MsgBox('Pasta incorreta: bin\win_x64\amtrucks.exe nao encontrado. / Invalid game directory.', mbError, MB_OK); Result := False;
+    MsgBox(CustomMessage('InvalidGameDirectory'), mbError, MB_OK); Result := False;
   end;
 end;
 function PrepareToInstall(var NeedsRestart: Boolean): String;
 var Target, Backup: String;
 begin
   Result := '';
-  if not GameValid(GamePage.Values[0]) then begin Result := 'Invalid game directory'; Exit; end;
+  if not GameValid(GamePage.Values[0]) then begin Result := CustomMessage('InvalidGameDirectory'); Exit; end;
   Target := AddBackslash(GetPluginDir('')) + 'ATSPrancheta.dll';
   if FileExists(Target) then begin
     Backup := Target + '.' + GetDateTimeString('yyyymmddhhnnsszzz','-',':') + '.bak';
-    if not FileCopy(Target, Backup, True) then Result := 'Nao foi possivel preservar backup da DLL / Cannot back up DLL';
+    if not CopyFile(Target, Backup, True) then Result := CustomMessage('BackupError');
   end;
 end;
