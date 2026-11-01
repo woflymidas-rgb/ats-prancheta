@@ -1,0 +1,878 @@
+{
+  "base": {
+    "elm_whs": {
+      "texture": "elimax",
+      "name": "Elimax"
+    },
+    "syn_che_plnt": {
+      "texture": "syntetico",
+      "name": "Syntetico"
+    },
+    "ven_whs": {
+      "texture": "venture",
+      "name": "Venture"
+    },
+    "cal_car_exp": {
+      "texture": "caliber",
+      "name": "Caliber Motors"
+    },
+    "pet_oil_well": {
+      "texture": "petrolucent",
+      "name": "Petrolucent"
+    },
+    "pns_con_sit2": {
+      "texture": "plaster_n_son",
+      "name": "Plaster & Sons"
+    },
+    "dg_wd_saw": {
+      "texture": "dg_wd",
+      "name": "Deepgrove"
+    },
+    "port_gal": {
+      "texture": "port_gal",
+      "name": "Galveston Port"
+    },
+    "plu_el_mkt": {
+      "texture": "plugged",
+      "name": "Plugged"
+    },
+    "dmc_car_dlr": {
+      "texture": "dmc_car_dlr",
+      "name": "DeMuro Cars"
+    },
+    "gss_air_svc": {
+      "texture": "globalsky",
+      "name": "Global Sky Services"
+    },
+    "vp_epw_sit": {
+      "texture": "vp_epw_pln",
+      "name": "Vitas Power"
+    },
+    "aport_iah": {
+      "texture": "aport_iah",
+      "name": "Houston Intercont. Airport"
+    },
+    "sht_mkt": {
+      "texture": "shoptown",
+      "name": "Shop Town"
+    },
+    "nmq_min_qrys": {
+      "texture": "namiq",
+      "name": "NAMIQ"
+    },
+    "aport_pcc": {
+      "texture": "aport_pcc",
+      "name": "Portland Cargo Central"
+    },
+    "aport_lit": {
+      "texture": "pulaski_county_airport",
+      "name": "Pulaski County Airport"
+    },
+    "gm_chs_plnt": {
+      "texture": "gm_food_plnt",
+      "name": "Global Mills"
+    },
+    "gm_food_plnt": {
+      "texture": "gm_food_plnt",
+      "name": "Global Mills"
+    },
+    "cm_brx_pln": {
+      "texture": "coastline_mining",
+      "name": "Coastline Mining"
+    },
+    "flv_food_str": {
+      "texture": "flavorfair",
+      "name": "Flavorfair"
+    },
+    "bit_rd_wrk": {
+      "texture": "bitumen",
+      "name": "Bitumen"
+    },
+    "vp_epw_pln": {
+      "texture": "vp_epw_pln",
+      "name": "Vitas Power"
+    },
+    "syn_che_plne": {
+      "texture": "syntetico",
+      "name": "Syntetico"
+    },
+    "evg_frm": {
+      "texture": "evergreen",
+      "name": "Evergreen"
+    },
+    "gld_frm": {
+      "texture": "goldmead",
+      "name": "Golden Meadows"
+    },
+    "vm_car_exp": {
+      "texture": "voltison",
+      "name": "Voltison"
+    },
+    "apx_met_wrk": {
+      "texture": "apex_steel",
+      "name": "Apex Steel"
+    },
+    "wds_wst_whs": {
+      "texture": "wds",
+      "name": "WDS"
+    },
+    "ch_wd_hrv": {
+      "texture": "chuck",
+      "name": "Chuck & Jack's"
+    },
+    "xtm_con_svc": {
+      "texture": "xtech",
+      "name": "X-Tech Machinery"
+    },
+    "mr_cot_pln": {
+      "texture": "mary",
+      "name": "Mary's Cotton"
+    },
+    "gp_live_auc": {
+      "texture": "grandpast",
+      "name": "Grand Pastures"
+    },
+    "nmq_min_svc": {
+      "texture": "namiq",
+      "name": "NAMIQ"
+    },
+    "usb_food_pln": {
+      "texture": "usbb",
+      "name": "US Beverages & Bottling"
+    },
+    "tid_mkt": {
+      "texture": "tidbit",
+      "name": "Tidbit"
+    },
+    "aml_rail_str": {
+      "texture": "american_lines",
+      "name": "American Lines"
+    },
+    "hau_oil_gst": {
+      "texture": "haulett",
+      "name": "Haulett"
+    },
+    "pns_con_whs": {
+      "texture": "plaster_n_son",
+      "name": "Plaster & Sons"
+    },
+    "pns_con_sit3": {
+      "texture": "plaster_n_son",
+      "name": "Plaster & Sons"
+    },
+    "pio_car_dlr": {
+      "texture": "pioneer",
+      "name": "Pioneer"
+    },
+    "vor_oil_str1": {
+      "texture": "vortex",
+      "name": "Vortex"
+    },
+    "aport_ord": {
+      "texture": "chicagoairport",
+      "name": "Chicago International Airport"
+    },
+    "port_bea": {
+      "texture": "port_bea",
+      "name": "Beaumont Freight Terminal"
+    },
+    "re_train": {
+      "texture": "re_train",
+      "name": "Rail Export"
+    },
+    "nmq_min_qrya": {
+      "texture": "namiq",
+      "name": "NAMIQ"
+    },
+    "sh_shp_plnt": {
+      "texture": "sh_shp_pln",
+      "name": "Sea Horizon"
+    },
+    "vor_oil_sit": {
+      "texture": "vortex",
+      "name": "Vortex"
+    },
+    "sg_whs": {
+      "texture": "sellgoods",
+      "name": "SellGoods"
+    },
+    "pnp_wd_pln": {
+      "texture": "pnp_wd_pln",
+      "name": "Page & Price Paper"
+    },
+    "spc_whs": {
+      "texture": "spacepark",
+      "name": "Space Park"
+    },
+    "ali_car_dlr": {
+      "texture": "aliscars",
+      "name": "Alis Cars"
+    },
+    "vor_oil_ref": {
+      "texture": "vortex",
+      "name": "Vortex"
+    },
+    "wal_mkt": {
+      "texture": "walbert",
+      "name": "Wallbert"
+    },
+    "tay_con_sit3": {
+      "texture": "taylor",
+      "name": "Taylor Construction Group"
+    },
+    "hds_met_shp": {
+      "texture": "hds_met_shp",
+      "name": "Haddock Shipyard"
+    },
+    "gul_oil_str": {
+      "texture": "gulfica",
+      "name": "Gulfica"
+    },
+    "cm_min_svc": {
+      "texture": "coastline_mining",
+      "name": "Coastline Mining"
+    },
+    "hs_mkt": {
+      "texture": "hs",
+      "name": "Home Store"
+    },
+    "mcs_con_sit": {
+      "texture": "mcs_con_sit",
+      "name": "Mud Creek slide"
+    },
+    "aqv_shp_mar": {
+      "texture": "aquavista",
+      "name": "Aqua Vista"
+    },
+    "ch_wd_saw": {
+      "texture": "chuck",
+      "name": "Chuck & Jack's"
+    },
+    "dyn_car_pln": {
+      "texture": "dynamix",
+      "name": "Dynamix"
+    },
+    "syn_che_str": {
+      "texture": "syntetico",
+      "name": "Syntetico"
+    },
+    "gal_oil_gst": {
+      "texture": "gallon_oil",
+      "name": "Gallon Oil"
+    },
+    "42p_print": {
+      "texture": "42print",
+      "name": "42 Print"
+    },
+    "ele_epw_sit": {
+      "texture": "elegrid",
+      "name": "Elegrid"
+    },
+    "out_car_pln": {
+      "texture": "outrider",
+      "name": "Outrider"
+    },
+    "tch_el_pln": {
+      "texture": "technoma",
+      "name": "Technoma"
+    },
+    "oak_port": {
+      "texture": "oak_port",
+      "name": "Oakland Shippers"
+    },
+    "port_hou": {
+      "texture": "port_hou",
+      "name": "Houston Cargo Terminal"
+    },
+    "sh_shp_mar": {
+      "texture": "sh_shp_pln",
+      "name": "Sea Horizon"
+    },
+    "stc_car_pln": {
+      "texture": "steelion",
+      "name": "Steelion Customs"
+    },
+    "cm_min_qry": {
+      "texture": "coastline_mining",
+      "name": "Coastline Mining"
+    },
+    "tay_con_sit1": {
+      "texture": "taylor",
+      "name": "Taylor Construction Group"
+    },
+    "garc_train": {
+      "texture": "garc",
+      "name": "GARC"
+    },
+    "mwm_wst_whs": {
+      "texture": "mwm",
+      "name": "MWM"
+    },
+    "pns_con_sit": {
+      "texture": "plaster_n_son",
+      "name": "Plaster & Sons"
+    },
+    "chm_che_plns": {
+      "texture": "chemso",
+      "name": "Chemso Ltd."
+    },
+    "ant_con_pln": {
+      "texture": "antlion",
+      "name": "Antlion"
+    },
+    "ffe_frm_dlr": {
+      "texture": "fieldforce",
+      "name": "Field Force Equipment"
+    },
+    "apa_car_whs": {
+      "texture": "apade",
+      "name": "Apade"
+    },
+    "ath_trk_dlr": {
+      "texture": "ath",
+      "name": "American Truck Haulers"
+    },
+    "grp_oil_gst": {
+      "texture": "greenpetrol",
+      "name": "GreenPetrol"
+    },
+    "swb_sug_plnt": {
+      "texture": "sweetbeets",
+      "name": "Sweetbeets"
+    },
+    "nls_rd_wrk": {
+      "texture": "nielsen",
+      "name": "Nielsen Roads"
+    },
+    "nmq_min_plnt": {
+      "texture": "namiq",
+      "name": "NAMIQ"
+    },
+    "aport_abq": {
+      "texture": "aport_abq",
+      "name": "ABQ Cargo Center"
+    },
+    "sf_port": {
+      "texture": "sf_port",
+      "name": "Port of SF"
+    },
+    "nmq_min_pln2": {
+      "texture": "namiq",
+      "name": "NAMIQ"
+    },
+    "avs_met_scr": {
+      "texture": "avs_met_scr",
+      "name": "Avalanche Steel"
+    },
+    "18w_trl_svc": {
+      "texture": "18wheels",
+      "name": "18 Wheels"
+    },
+    "eg_che_str": {
+      "texture": "epro",
+      "name": "Epro Gas"
+    },
+    "aport_cid": {
+      "texture": "aport_cid",
+      "name": "Cedar Rapids Airfield"
+    },
+    "chm_che_str": {
+      "texture": "chemso",
+      "name": "Chemso Ltd."
+    },
+    "port_la": {
+      "texture": "port_la",
+      "name": "LA Seaport"
+    },
+    "vor_oil_gst": {
+      "texture": "vortex",
+      "name": "Vortex"
+    },
+    "aport_ult": {
+      "texture": "aport_ult",
+      "name": "Ultimus"
+    },
+    "pho_oil_gst": {
+      "texture": "phoenix",
+      "name": "Phoenix"
+    },
+    "nls_rd_svc": {
+      "texture": "nielsen",
+      "name": "Nielsen Roads"
+    },
+    "sil_met_pln": {
+      "texture": "silverline",
+      "name": "Silverline Corp."
+    },
+    "port_no": {
+      "texture": "creolebay",
+      "name": "Creole Bay Port"
+    },
+    "bit_rd_svc": {
+      "texture": "bitumen",
+      "name": "Bitumen"
+    },
+    "aport_elp": {
+      "texture": "aport_elp",
+      "name": "El Paso Freight"
+    },
+    "blo_frm_str": {
+      "texture": "bloomscape",
+      "name": "Bloomscape"
+    },
+    "dg_wd_hrv": {
+      "texture": "dg_wd",
+      "name": "Deepgrove"
+    },
+    "st_met_whs": {
+      "texture": "st_met",
+      "name": "Steeler"
+    },
+    "gp_farm": {
+      "texture": "grandpast",
+      "name": "Grand Pastures"
+    },
+    "bm_con_pln": {
+      "texture": "buildmaster",
+      "name": "Buildmaster Manufacturing Co."
+    },
+    "kw_trk_pln": {
+      "texture": "kw_trk_pln",
+      "name": "Kenworth"
+    },
+    "dg_wd_saw1": {
+      "texture": "dg_wd",
+      "name": "Deepgrove"
+    },
+    "dw_air_pln": {
+      "texture": "dw_air_pln",
+      "name": "Darwing"
+    },
+    "port_cor": {
+      "texture": "port_corchri",
+      "name": "Corpus Christi Cargo Terminal"
+    },
+    "cm_min_str": {
+      "texture": "coastline_mining",
+      "name": "Coastline Mining"
+    },
+    "ai_car_whs": {
+      "texture": "ai",
+      "name": "AI Automotive"
+    },
+    "fb_farm_pln": {
+      "texture": "farmers_barn",
+      "name": "Farmer's Barn"
+    },
+    "bn_live_auc": {
+      "texture": "bushnell_farm",
+      "name": "Bushnell Farms"
+    },
+    "wan_car_dlr": {
+      "texture": "wanderlust",
+      "name": "Wanderlust"
+    },
+    "ed_mkt": {
+      "texture": "eddys_food",
+      "name": "Eddy's"
+    },
+    "nmq_min_qry": {
+      "texture": "namiq",
+      "name": "NAMIQ"
+    },
+    "wp_oil_gst": {
+      "texture": "wp",
+      "name": "WP"
+    },
+    "gas_che_str": {
+      "texture": "gastream",
+      "name": "Gastream"
+    },
+    "apx_met_sml": {
+      "texture": "apex_steel",
+      "name": "Apex Steel"
+    },
+    "frd_epw_sit": {
+      "texture": "faraday",
+      "name": "Faraday"
+    },
+    "equ_whs": {
+      "texture": "equos",
+      "name": "Equos Power Transport"
+    },
+    "bn_farm": {
+      "texture": "bushnell_farm",
+      "name": "Bushnell Farms"
+    },
+    "jns_rail_str": {
+      "texture": "jns",
+      "name": "Johnson and Smith"
+    },
+    "dpw_oil_svc": {
+      "texture": "deepwell",
+      "name": "Deep Wells"
+    },
+    "st_met_wrk": {
+      "texture": "st_met",
+      "name": "Steeler"
+    },
+    "apx_met_whs": {
+      "texture": "apex_steel",
+      "name": "Apex Steel"
+    },
+    "gal_oil_str1": {
+      "texture": "gallon_oil",
+      "name": "Gallon Oil"
+    },
+    "pic_mkt": {
+      "texture": "pickit",
+      "name": "Pickit"
+    },
+    "gm_food_str": {
+      "texture": "gm_food_plnt",
+      "name": "Global Mills"
+    },
+    "elv_el_pln": {
+      "texture": "electravolt",
+      "name": "Electravolt Industries"
+    },
+    "gal_oil_sit": {
+      "texture": "gallon_oil",
+      "name": "Gallon Oil"
+    },
+    "cha_el_mkt": {
+      "texture": "charged",
+      "name": "Charged"
+    },
+    "ws_trk_pln": {
+      "texture": "ws_trk_pln",
+      "name": "Western Star"
+    },
+    "nls_rd_grg": {
+      "texture": "nielsen",
+      "name": "Nielsen Roads"
+    },
+    "aml_rail_wrk": {
+      "texture": "american_lines",
+      "name": "American Lines"
+    },
+    "jns_rail_wrk": {
+      "texture": "jns",
+      "name": "Johnson and Smith"
+    },
+    "hms_con_svc": {
+      "texture": "hms_service",
+      "name": "HMS Machinery"
+    },
+    "gld_frm_grg": {
+      "texture": "goldmead",
+      "name": "Golden Meadows"
+    },
+    "lsf_crg_fwd": {
+      "texture": "lonestar",
+      "name": "Lonestar Forwarding"
+    },
+    "naf_oil_gst": {
+      "texture": "naf",
+      "name": "NAF"
+    },
+    "nmq_min_pln1": {
+      "texture": "namiq",
+      "name": "NAMIQ"
+    },
+    "pt_trk_dlr": {
+      "texture": "peterbilt",
+      "name": "Peterbilt"
+    },
+    "nmq_min_str": {
+      "texture": "namiq",
+      "name": "NAMIQ"
+    },
+    "cm_min_qryp": {
+      "texture": "coastline_mining",
+      "name": "Coastline Mining"
+    },
+    "ele_epw_svc": {
+      "texture": "elegrid",
+      "name": "Elegrid"
+    },
+    "drh_mkt": {
+      "texture": "dr_hammer",
+      "name": "Dr. Hammer"
+    },
+    "sb_whs": {
+      "texture": "starbridge",
+      "name": "Starbridge"
+    },
+    "oh_con_hom": {
+      "texture": "oh_con_hom",
+      "name": "Olthon Homes"
+    },
+    "gpw_rd_grg": {
+      "texture": "gpw",
+      "name": "GPW"
+    },
+    "bit_rd_grg": {
+      "texture": "bitumen",
+      "name": "Bitumen"
+    },
+    "aport_dfw": {
+      "texture": "aport_dfw",
+      "name": "Airport Dallas Fort Worth"
+    },
+    "42p_pck_pln": {
+      "texture": "42print",
+      "name": "42 Print"
+    },
+    "rp_port": {
+      "texture": "rockport",
+      "name": "Rock Port"
+    },
+    "yel_bus_pln": {
+      "texture": "yelco",
+      "name": "Yelco Busses"
+    },
+    "kw_trk_dlr": {
+      "texture": "kw_trk_pln",
+      "name": "Kenworth"
+    },
+    "sc_frm": {
+      "texture": "sunshine",
+      "name": "Sunshine Crops"
+    },
+    "ent_whs": {
+      "texture": "enterpriser",
+      "name": "Enterpriser"
+    },
+    "mon_farm": {
+      "texture": "moncoeur",
+      "name": "Mon Coeur"
+    },
+    "gal_oil_svc": {
+      "texture": "gallon_oil",
+      "name": "Gallon Oil"
+    },
+    "fb_farm_mkt": {
+      "texture": "farmers_barn",
+      "name": "Farmer's Barn"
+    },
+    "tay_con_sit": {
+      "texture": "taylor",
+      "name": "Taylor Construction Group"
+    },
+    "ai_car_pln": {
+      "texture": "ai",
+      "name": "AI Automotive"
+    },
+    "aport_tul": {
+      "texture": "tulsafreight",
+      "name": "Tulsa Freight"
+    },
+    "tay_con_sit2": {
+      "texture": "taylor",
+      "name": "Taylor Construction Group"
+    },
+    "cal_farm_alm": {
+      "texture": "calimondo",
+      "name": "Calimondo"
+    },
+    "wac_air_svc": {
+      "texture": "wac",
+      "name": "Wingman Aviation Center"
+    },
+    "gre_con_dlr": {
+      "texture": "groundbreaker",
+      "name": "Groundbreaker Equipment"
+    },
+    "gal_oil_well": {
+      "texture": "gallon_oil",
+      "name": "Gallon Oil"
+    },
+    "aport_lax": {
+      "texture": "aca",
+      "name": "Angel City Airport"
+    },
+    "port_sea": {
+      "texture": "port_sea",
+      "name": "Port of Seattle"
+    },
+    "aro_oil_gst": {
+      "texture": "aron",
+      "name": "Aron"
+    },
+    "wld_frm_str": {
+      "texture": "waldens",
+      "name": "Waldens"
+    },
+    "lum_car_dlr": {
+      "texture": "lumenauto",
+      "name": "Lumen auto"
+    },
+    "az_gls_pln": {
+      "texture": "azure",
+      "name": "Azure"
+    },
+    "mon_food_pln": {
+      "texture": "moncoeur",
+      "name": "Mon Coeur"
+    },
+    "ter_met_shp": {
+      "texture": "tera",
+      "name": "Tera"
+    },
+    "port_tac": {
+      "texture": "port_tac",
+      "name": "Port of Tacoma"
+    },
+    "und_str": {
+      "texture": "undercitystorage",
+      "name": "Undercity Storage"
+    },
+    "hf_wd_pln": {
+      "texture": "hf_wd_pln",
+      "name": "Heartwood Furniture"
+    },
+    "vm_car_pln": {
+      "texture": "voltison",
+      "name": "Voltison"
+    },
+    "port_bro": {
+      "texture": "port_bro",
+      "name": "Brownsville Port"
+    },
+    "asu_car_pln": {
+      "texture": "asuma",
+      "name": "Asuma"
+    },
+    "sc_frm_grg": {
+      "texture": "sunshine",
+      "name": "Sunshine Crops"
+    },
+    "flv_food_pln": {
+      "texture": "flavorfair",
+      "name": "Flavorfair"
+    },
+    "asu_car_exp": {
+      "texture": "asuma",
+      "name": "Asuma"
+    },
+    "dc_car_dlr": {
+      "texture": "dc_car_dlr",
+      "name": "Drake Cars"
+    },
+    "aport_phx": {
+      "texture": "phoenix_freight",
+      "name": "Phoenix Freight"
+    },
+    "myr_wd_mkt": {
+      "texture": "myroo",
+      "name": "Myroo"
+    },
+    "pcp_car_whs": {
+      "texture": "pcp",
+      "name": "Precision Car Parts"
+    },
+    "tay_con_grg": {
+      "texture": "taylor",
+      "name": "Taylor Construction Group"
+    },
+    "cal_car_pln": {
+      "texture": "caliber",
+      "name": "Caliber Motors"
+    },
+    "apx_met_scr": {
+      "texture": "apex_steel",
+      "name": "Apex Steel"
+    },
+    "trs_whs": {
+      "texture": "terrastore",
+      "name": "Terrastore"
+    },
+    "gol_trk_pln": {
+      "texture": "goliath",
+      "name": "Goliath"
+    },
+    "gal_oil_ref": {
+      "texture": "gallon_oil",
+      "name": "Gallon Oil"
+    },
+    "aport_ict": {
+      "texture": "skyharbor",
+      "name": "Wichita Sky Harbor"
+    },
+    "mcc_frm_pln": {
+      "texture": "mcclane",
+      "name": "McClane"
+    },
+    "ws_trk_dlr": {
+      "texture": "ws_trk_pln",
+      "name": "Western Star"
+    },
+    "tay_con_whs": {
+      "texture": "taylor",
+      "name": "Taylor Construction Group"
+    },
+    "h_castle": {
+      "texture": "h_castle",
+      "name": "Castle Brackenhelm"
+    },
+    "aport_den": {
+      "texture": "aport_den",
+      "name": "Airport Denver"
+    },
+    "frd_epw_svc": {
+      "texture": "faraday",
+      "name": "Faraday"
+    },
+    "vor_oil_str": {
+      "texture": "vortex",
+      "name": "Vortex"
+    },
+    "chm_che_plnt": {
+      "texture": "chemso",
+      "name": "Chemso Ltd."
+    },
+    "pns_con_sit1": {
+      "texture": "plaster_n_son",
+      "name": "Plaster & Sons"
+    },
+    "avs_met_sml": {
+      "texture": "avs_met_scr",
+      "name": "Avalanche Steel"
+    },
+    "pns_con_grg": {
+      "texture": "plaster_n_son",
+      "name": "Plaster & Sons"
+    },
+    "fus_oil_gst": {
+      "texture": "fusion",
+      "name": "Fusion"
+    },
+    "cm_min_plnt": {
+      "texture": "coastline_mining",
+      "name": "Coastline Mining"
+    },
+    "aport_gtf": {
+      "texture": "greatfallscargo",
+      "name": "GF Cargo"
+    },
+    "ftf_food_pln": {
+      "texture": "ftf_food_pln",
+      "name": "Fish Tail Food"
+    },
+    "gal_oil_str": {
+      "texture": "gallon_oil",
+      "name": "Gallon Oil"
+    },
+    "dri_oil_gst": {
+      "texture": "driverse",
+      "name": "Driverse"
+    },
+    "ccw_rd_grg": {
+      "texture": "ccw",
+      "name": "Central Civil Works"
+    }
+  },
+  "version": 1,
+  "overrides": []
+}

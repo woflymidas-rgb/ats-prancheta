@@ -1,0 +1,22 @@
+build/
+dist/
+*.obj
+*.exe
+*.dll
+*.lib
+*.exp
+*.pdb
+*.ilk
+*.bak
+*-check-data/
+settings.ini
+settings.pending.*
+settings.backup.*
+current*.json
+current.txt
+emission-event.json
+profiles/
+.vs/
+
+# Media not licensed under project MIT; keep out of source upload.
+assets/sounds/*.mp3

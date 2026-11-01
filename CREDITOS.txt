@@ -1,0 +1,23 @@
+ATS Prancheta 1.0.0
+Autor / Author: Click Taberna
+https://steamcommunity.com/id/clicktaberna/
+
+Desenvolvimento e integração com assistência do Codex.
+Prancheta: imagem gerada para este projeto com ferramenta de geração de imagens.
+Software usa SCS Telemetry SDK, SII-Decrypt-cpp e nlohmann/json.
+Licenças integrais em licenses/THIRD-PARTY-LICENSES.txt.
+
+Impressão / Printer: squashy555 (Freesound), publicado por freesound_community no Pixabay.
+https://pixabay.com/sound-effects/technology-printer-25474/
+Fornecido pelo autor do mod; arquivo original preservado.
+Referência de licença: https://pixabay.com/service/license-summary/
+
+Papel / Page flip:
+https://www.myinstants.com/media/sounds/page-flip-01a.mp3
+Fornecido pelo autor do mod; arquivo original preservado.
+O link direto não informa autoria nem licença de redistribuição.
+Ver pendências de publicação antes de liberar o pacote publicamente.
+
+Empresas, marcas e nomes do jogo pertencem aos respectivos titulares.
+Este projeto é independente, sem afiliação com SCS Software ou as empresas citadas.
+O pacote não inclui os logos do mod de empresas reais utilizado nos testes.
