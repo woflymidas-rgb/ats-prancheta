@@ -1,94 +1,113 @@
-# ATS Prancheta
+# Cargo Clipboard
 
-[English](#english) · [Português](#português)
+[Download v1.0.0](https://github.com/woflymidas-rgb/ats-prancheta/releases/latest) · [English](#english) · [Português](#português)
+
+By / Por [Click Taberna](https://steamcommunity.com/id/clicktaberna/)
 
 ## English
 
-An open-source 2D clipboard with persistent transport documents for American Truck Simulator.
-By [Click Taberna](https://steamcommunity.com/id/clicktaberna/).
-Project code: MIT. Dependencies and media retain their own terms.
+Bring a transport document into your cab with **Cargo Clipboard**. Your current job appears on a 2D clipboard, with a paper-style layout and the delivery information in one place.
 
-### Status and installation
+**Available for American Truck Simulator. A Euro Truck Simulator 2 edition is planned for the future; this release does not support ETS2.**
 
-Download the installer or portable ZIP from [Releases](https://github.com/woflymidas-rgb/ats-prancheta/releases/latest).
-This is a native telemetry DLL and an external Windows overlay, not a .scs Workshop mod.
-No Python, application account or network connection is needed while playing.
+### Preview
 
-The ATS plugin automatically starts the overlay and the overlay exits when that game process ends, including crashes. No Windows startup service or scheduled task is installed. A manual shortcut remains available for troubleshooting.
+<p align="center">
+  <img src="docs/images/clipboard-en.png" alt="Cargo Clipboard preview in English" width="390">
+</p>
 
-F8 toggles the clipboard; Ctrl+F8 changes the shortcut. Existing game bindings are allowed.
-New documents open automatically. Data stays fixed during the trip and is stored per profile.
-Windows x64 / ATS 1.61.3.18 tested. VR, other platforms and World of Trucks not validated.
-Language follows the ATS startup log; 43 locale variants included.
+The preview shows a setup with a real-company mod. Logos can differ from the base game; that third-party logo pack is not included in this download.
 
-### Build and audit
+### Features
 
-Install Visual Studio Build Tools 2022 with Desktop development with C++ and Windows SDK.
-Run `./build.ps1 -RunTests` in PowerShell. Optionally pass `-ToolchainRoot` to the
-VC/Tools/MSVC/<version> directory. Output: build/ATSPrancheta.dll and ATSPrancheta.exe.
-Dependencies and their licenses are included. Tests use synthetic data and never start ATS.
-To build setup, install Inno Setup and run `./build-installer.ps1 -Compiler <path-to-ISCC.exe>`.
-See [installer behavior](docs/INSTALLER.md). Identical binaries across toolchains are not promised.
+- Transport document showing pickup and delivery companies, cities/states, cargo, quantity, weight, pickup time, delivery deadline, time allowed at pickup and planned distance, when those details are available.
+- Fixed information throughout the trip: the document does not count down or change with the GPS route.
+- Automatic opening when a document is issued, with printer and page-flip sound effects.
+- Support for Quick Jobs, Freight Market and Cargo Market.
+- Separate records for each profile, restored when you return to a saved trip. Reattaching the trailer does not create another document.
+- Configurable shortcut, shown on the clipboard frame, and 43 language variants following the game's startup language.
+- Starts and exits automatically with ATS. You do not need to run or close a separate app manually.
 
-The plugin receives telemetry and reads the loaded save in memory to distinguish new jobs
-from restores. It does not modify saves, controls, cargo weights or physics. The overlay
-renders via GDI+ and reads shortcuts using Win32. No network requests or credentials are used.
-Data stays in `%LOCALAPPDATA%/ATSPrancheta/prototype-single-profile`.
-Open source enables inspection; it is not a digital signature or a security certification.
+If the mod first sees a job after pickup, unrecorded pickup details remain unavailable.
 
-MIT covers our code, not SCS game resources or third-party media. See CREDITOS.txt and licenses/.
-Audio files are supplied in the release packages; see CREDITOS.txt for their sources.
-Missing audio does not prevent displaying documents; playback fails silently.
-Real-company logos from the third-party mod used during development are not redistributed.
-[Truck Manager notes](docs/MOD-MANAGERS.md): integration is not confirmed; both default to F8.
+### Install
+
+1. Download **ATS-Prancheta-1.0.0-Setup.exe** from [Releases](https://github.com/woflymidas-rgb/ats-prancheta/releases/latest).
+2. Close ATS and any older clipboard window, then run the installer.
+3. Choose a folder for the clipboard application. It can be outside the game folder.
+4. Confirm the folder containing **amtrucks.exe**, usually `American Truck Simulator\bin\win_x64`. The installer tries to find it automatically.
+5. Choose whether to create Start menu or desktop shortcuts, finish installation and launch ATS normally.
+
+The **Portable ZIP** is an alternative for manual installation; follow its README.txt. This is not a `.scs` mod and does not need to be enabled in the game's Mod Manager.
+
+### Use
+
+| Action | Default shortcut |
+| --- | --- |
+| Open / close the clipboard | **F8** |
+| Change the shortcut | **Ctrl + F8** |
+
+A newly issued document opens automatically. Your selected shortcut appears on the frame. If another mod uses the same key, choose a different one through Ctrl+F8. To change the document language, change the game language and restart ATS.
+
+### Compatibility and support
+
+Tested on **Windows x64 and ATS 1.61.3.18**. World of Trucks / external contracts, VR and other platforms are not validated. Custom map cities or companies may have missing details or logos.
+
+The project is open source. It works offline, requires no account, and does not change cargo weights, physics or game saves. Component and media credits are in [CREDITOS.txt](CREDITOS.txt).
+
+Report problems through [Issues](https://github.com/woflymidas-rgb/ats-prancheta/issues), including your ATS version, job market and steps to reproduce the issue.
+
+---
 
 ## Português
 
-Documento de transporte em prancheta 2D para American Truck Simulator.
-Autor: [Click Taberna](https://steamcommunity.com/id/clicktaberna/).
-Código do projeto sob MIT; dependências e recursos possuem condições próprias.
+Leve um documento de transporte para a cabine com o **Cargo Clipboard**. O serviço atual aparece em uma prancheta 2D, com aparência de papel e as informações da entrega reunidas em um só lugar.
 
-## Instalar
+**Disponível para American Truck Simulator. Uma edição para Euro Truck Simulator 2 está planejada para o futuro; esta versão não oferece suporte ao ETS2.**
 
-Use uma versão publicada em Releases. Esta aplicação é uma DLL de telemetria e um
-visor Windows externo; não é um arquivo .scs e não se instala por inscrição no Workshop.
-Não há exigência de Python para jogar, conexão de rede ou conta neste aplicativo.
-O instalador e o ZIP estão disponíveis em [Releases](https://github.com/woflymidas-rgb/ats-prancheta/releases/latest).
+### Demonstração
 
-F8 abre/fecha por padrão; Ctrl+F8 configura a tecla, inclusive teclas usadas pelo jogo.
-Novo documento abre automaticamente. Registros são fixos e separados por perfil.
-Windows x64 / ATS 1.61.3.18 testado. Outros sistemas, VR e World of Trucks não validados.
-O idioma segue o registro de inicialização do ATS;43 variantes incluídas.
+<p align="center">
+  <img src="docs/images/clipboard-pt-br.png" alt="Demonstração do Cargo Clipboard em português" width="390">
+</p>
 
-## Compilar e conferir
+A imagem mostra uma instalação com mod de empresas reais. Os logos podem ser diferentes dos encontrados no jogo base; esse pacote de logos de terceiros não está incluído neste download.
 
-Instale Visual Studio Build Tools2022 com C++Desktop e Windows10/11 SDK.
-No PowerShell, dentro desta pasta: `./build.ps1 -RunTests`.
-Alternativamente informe `-ToolchainRoot` para a pasta VC/Tools/MSVC/<versão>.
-Saída: build/ATSPrancheta.dll e build/ATSPrancheta.exe.
-SDK1.16 e leitor SII estão incluídos com licenças; não é necessário fornecer saves.
-Os testes usam dados sintéticos em diretórios próprios e não iniciam o ATS.
-Não se promete igualdade byte a byte entre compiladores diferentes.
+### Recursos
 
-## Transparência
+- Documento de transporte com empresas de coleta e entrega, cidades/estados, carga, quantidade, peso, horário de coleta, prazo final, tempo disponível na coleta e distância planejada, quando essas informações estiverem disponíveis.
+- Informações fixas durante a viagem: o documento não faz contagem regressiva nem muda com a rota do GPS.
+- Abertura automática quando um documento é emitido, com efeitos sonoros de impressão e passagem de página.
+- Suporte a Trabalho Rápido, Mercado de Frete e Mercado de Carga.
+- Registros separados por perfil, recuperados ao retornar a uma viagem salva. Desengatar e reengatar o reboque não cria outro documento.
+- Atalho configurável, indicado na borda da prancheta, e 43 variantes de idioma seguindo o idioma de inicialização do jogo.
+- Inicia e encerra automaticamente com o ATS. Você não precisa abrir ou fechar outro aplicativo manualmente.
 
-O plugin recebe telemetria e lê cópias/em memória do save carregado para distinguir
-contratação nova de restauração. Não altera saves/controles/pesos/física do ATS.
-O visor lê os registros locais, desenha via GDI+ e consulta as teclas por Win32.
-Dados ficam em %LOCALAPPDATA%/ATSPrancheta/prototype-single-profile.
-O código da distribuição não realiza requisições de rede nem inclui credenciais.
-Abrir o código facilita auditoria; não equivale a assinatura digital ou prova de segurança.
-Não desative antivírus para instalar. Reporte falsos positivos com versão/hash do arquivo.
+Se o mod identificar um serviço pela primeira vez depois da coleta, os dados de coleta que não foram registrados permanecerão indisponíveis.
 
-## Recursos e dependências
+### Instalação
 
-MIT aplica-se ao código próprio. SDK, SII-Decrypt-cpp e nlohmann/json mantêm suas
-licenças em licenses e nas respectivas pastas. Traduções/nomes/logos oficiais extraídos
-do ATS não são relicenciados por este LICENSE. A arte da prancheta foi gerada para
-este projeto; áudios e suas fontes constam em CREDITOS.txt. Fontes dos áudios registradas em CREDITOS.txt.
-Logos do mod de empresas reais usado nos testes não estão incluídos.
-Os MP3s são fornecidos nos pacotes da release; as fontes constam em CREDITOS.txt.
+1. Baixe **ATS-Prancheta-1.0.0-Setup.exe** em [Releases](https://github.com/woflymidas-rgb/ats-prancheta/releases/latest).
+2. Feche o ATS e qualquer janela antiga da prancheta; depois execute o instalador.
+3. Escolha uma pasta para o aplicativo da prancheta. Ela pode ficar fora da pasta do jogo.
+4. Confirme a pasta que contém **amtrucks.exe**, geralmente `American Truck Simulator\bin\win_x64`. O instalador tenta encontrá-la automaticamente.
+5. Escolha se deseja criar atalhos no Menu Iniciar ou na Área de Trabalho, conclua a instalação e abra o ATS normalmente.
 
-## Gerenciadores
+O **ZIP Portable** é uma alternativa para instalação manual; siga o README.txt incluído. Este não é um mod `.scs` e não precisa ser ativado no Gerenciador de Mods do jogo.
 
-Veja docs/MOD-MANAGERS.md. Não há integração com Truck Manager confirmada.
+### Como usar
+
+| Ação | Atalho padrão |
+| --- | --- |
+| Abrir / fechar a prancheta | **F8** |
+| Alterar o atalho | **Ctrl + F8** |
+
+Um documento recém-emitido abre automaticamente. O atalho escolhido aparece na borda. Se outro mod usar a mesma tecla, escolha outra pelo Ctrl+F8. Para mudar o idioma do documento, altere o idioma do jogo e reinicie o ATS.
+
+### Compatibilidade e suporte
+
+Testado em **Windows x64 e ATS 1.61.3.18**. World of Trucks / contratos externos, VR e outros sistemas não foram validados. Cidades ou empresas de mapas personalizados podem ter informações ou logos ausentes.
+
+O projeto tem código aberto. Funciona offline, não exige conta e não altera pesos das cargas, física ou saves do jogo. Os créditos dos componentes e recursos estão em [CREDITOS.txt](CREDITOS.txt).
+
+Relate problemas em [Issues](https://github.com/woflymidas-rgb/ats-prancheta/issues), informando a versão do ATS, o mercado de trabalho utilizado e os passos para reproduzir o problema.
